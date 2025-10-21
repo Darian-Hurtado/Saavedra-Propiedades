@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <!-- Viewport - Optimización para móviles -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Saavedra Propiedades</title>
+
+    <!-- Google Fonts (Muli) -->
+    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css" />
+        <!-- Meta descripción - Aparece en los resultados de búsqueda -->
+    <meta name="description" content="Inmobiliaria Saavedra Propiedades te acompaña hace más de 50 años en Villa Urquiza. Venta, alquiler, tasaciones y administración de propiedades en CABA. Atención personalizada y confianza que se hereda.">
+    <!-- Palabras clave - útiles para motores secundarios -->
+    <meta name="keywords" content="inmobiliaria en villa urquiza, saavedra propiedades, venta de departamentos en villa urquiza, alquileres villa urquiza, tasaciones caba, compra venta de inmuebles, inmobiliarias tradicionales en buenos aires, inmobiliaria familiar caba, administración de propiedades, departamentos en venta zona norte caba">
+    <!-- Autor del sitio -->
+    <meta name="author" content="Saavedra Propiedades">
+    <!-- Favicon - Icono del sitio en pestañas del navegador-->
+    <link rel="icon" href="imagenes/favicon.png">
+
+    <!-- Open Graph - Para mejorar las vistas cuando se comparte en redes sociales -->
+    <meta property="og:title" content="Saavedra Propiedades | Inmobiliaria en Villa Urquiza">
+    <meta property="og:description" content="Más de 50 años acompañando familias en Villa Urquiza. Venta, alquiler y tasaciones de inmuebles en CABA.">
+    <meta property="og:image" content="URL-de-la-imagen-principal.jpg">
+    <meta property="og:url" content="https://saavedrapropiedades.com.ar/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Saavedra Propiedades">
+    <meta property="og:locale" content="es_AR">
+
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="imagenes/logosaavedrapropiedades.png" alt="Saavedra Propiedades" class="logo" />
+            </div>
+
+            <!-- Botón de menú hamburguesa -->
+            <button id="menu-toggle" class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Menú de navegación -->
+            <nav id="menu" class="main-nav">
+                    <button id="close-menu" class="close-menu">X</button> <!-- Botón para cerrar el menú -->
+                <a href="#nosotros">Nosotros</a>
+                <a href="#propiedades">Propiedades</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Fondo oscuro (overlay) para cuando el menú se abre -->
+    <div id="overlay" class="overlay"></div>
+
+<!-- Hero -->
+<section class="hero">
+    <img class="hero-bg" src="imagenes/hero.png" alt="Fachada Saavedra" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+        
+    <h1 class="hero-title">Tu inmobiliaria en Villa Urquiza<br></h1>
+    </div>
+</section>
+
+<!-- About / Commitment -->
+<section id="nosotros" class="about-container">
+    <div class="about-row">
+    <div class="about-card left">
+        <img src="imagenes/nosotros-1.png" alt="Oficina Saavedra" />
+    </div>
+
+    <div class="about-text">
+        <h2>
+        <p>Un compromiso que</p>
+        <p><span class="accent">se hereda</span></p>
+        </h2>
+
+        <p>
+        Más de 50 años acompañando a familias y generaciones en cada paso del camino.
+        Nuestra historia se basa en la confianza, la dedicación y el compromiso con cada cliente.
+        Hoy seguimos trabajando con los mismos valores que nos vieron nacer, brindando asesoramiento integral
+        y soluciones reales para cada necesidad inmobiliaria:
+        </p>
+
+        <ul class="about-list">
+        <li>Ventas: casas, departamentos, lotes, locales y galpones</li>
+        <li>Alquileres y administración</li>
+        <li>Tasaciones sin cargo</li>
+        <li>Sucesiones</li>
+        <li>Trámites de escribanía</li>
+        </ul>
+
+        <p class="accent">No dudes en consultarnos.</p>
+
+        <!-- Imágenes horizontales visibles solo en mobile -->
+        <div class="about-images-mobile">
+        <img src="imagenes/mobile1.png" alt="Equipo Saavedra" />
+        <img src="imagenes/mobile2.png" alt="Propiedades Saavedra" />
+        </div>
+    </div>
+
+    <div class="about-card right">
+        <img src="imagenes/nosotros-2.png" alt="Interior oficina" />
+    </div>
+    </div>
+
+    <!-- Imágenes decorativas de fondo solo en mobile -->
+    <img src="imagenes/bg-top.png" alt="" class="bg-deco top-right" />
+    <img src="imagenes/bg-bottom.png" alt="" class="bg-deco bottom-left" />
+</section>
+
+<!-- Portales / Cards -->
+<section id="propiedades" class="portals-container">
+    <h3 class="portals-title">
+    <span class="muted">Accedé a nuestras propiedades</span>
+    <span class="accent">en los portales que ya conocés</span>
+    </h3>
+
+    <div class="cards-grid">
+    <article class="portal-card">
+        <img src="imagenes/zonaprop.png" alt="ZonaProp" />
+        <div class="card-overlay">
+        <div class="card-meta">
+            <h4>Zonaprop</h4>
+            <p>Conocé más</p>
+        </div>
+        <button class="arrow-btn" aria-label="Ir a Zonaprop">→</button>
+        </div>
+    </article>
+
+    <article class="portal-card">
+        <img src="imagenes/argenprop.png" alt="Argenprop" />
+        <div class="card-overlay">
+        <div class="card-meta">
+            <h4>Argenprop</h4>
+            <p>Conocé más</p>
+        </div>
+        <button class="arrow-btn" aria-label="Ir a Argenprop">→</button>
+        </div>
+    </article>
+    </div>
+</section>
+
+<!-- Contact / Busquemos juntos -->
+<section id="contacto" class="contact-cta container">
+    
+    <div class="cta-card">
+        <img src="imagenes/decoracion-esquina.png" alt="decoración" class="corner-image">
+<div class="cta-left">
+        <h3>Busquemos juntos tu próximo hogar</h3>
+        <p class="small">Donde estamos</p>
+        <p class="muted">Nuñez 6302 - CABA (1431)</p>
+
+        <div class="info-block">
+        <p class="small">Horario de atención</p>
+        <p class="muted">Lunes a viernes: 10:00 a 13:00hs | 16:00 a 19:00hs</p>
+        </div>
+
+        <p class="small">Charlemos:</p>
+            <div class="contact-icons">
+                <a href="https://wa.me/+541129485907"><img src="imagenes/contacto-whatsapp.png" alt="enviar whatsapp"></a>
+                <a href="tel:+541145723201"><img src="imagenes/contacto-telefono.png" alt="llamar al número"></a>
+                <a href="mailto:saavedraprop@hotmail.com"><img src="imagenes/contacto-mail.png" alt="enviar correo"></a>
+            </div>
+    </div>
+
+    <div class="cta-right">
+        <div class="map-responsive">
+        <iframe
+            title="Ubicación - Nuñez 6302, CABA"
+            src="https://www.google.com/maps?q=Nu%C3%B1ez%206302%2C%20CABA%201431&output=embed"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+    <img class="footer-bg" src="imagenes/footer.png" alt="Fachada Saavedra" />
+    <div class="container footer-inner">
+        <div class="footer-brand">
+        <img src="imagenes/logosaavedrapropiedades.png" alt="Saavedra Propiedades" class="logo" />
+        </div>
+
+        <div class="footer-columns">
+            <div>
+            <h4>Visítanos</h4>
+            <p>Nuñez 6302<br/>1431 - CABA</p>
+            </div>
+        </div>
+        <div class="footer-columns">
+            <div>
+            <h4>Contáctanos</h4>
+            <p>
+            <a href="tel:+541145723201">
+                <img src="imagenes/icono-telefono-footer.png" alt="Teléfono"> 4572 3201
+            </a><br>
+
+            <a href="https://wa.me/+541129485907">
+                <img src="imagenes/icono-whats-footer.png" alt="WhatsApp"> 11 2348 5907
+            </a><br>
+
+            <a href="mailto:saavedraprop@hotmail.com">
+                <img src="imagenes/icono-mail-footer.png" alt="Correo"> saavedraprop@hotmail.com
+            </a>
+    </p>
+    </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+    © 2024 Saavedra Propiedades
+    </div>
+</footer>
+
+<!-- Scripts (opcional: para interacciones simples) -->
+<script>
+    // Ejemplo: efecto parallax simple en hero (sin librerías)
+    (function(){
+    const bg = document.querySelector('.hero-bg');
+    window.addEventListener('scroll', () => {
+        const sc = window.scrollY;
+        if (bg) bg.style.transform = `translateY(${sc * 0.15}px) scale(1.02)`;
+    });
+    })();
+</script>
+    <!-- Script del menú hamburguesa -->
+<script>
+    // Maneja el abrir y cerrar del menú con el botón hamburguesa
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    
+    // Alterna la clase 'active' para abrir y cerrar el menú
+    menu.classList.toggle('active');
+});
+
+// Cierra el menú cuando se hace clic en el botón "X"
+document.getElementById('close-menu').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    
+    // Remueve la clase 'active' para cerrar el menú
+    menu.classList.remove('active');
+});
+
+  // Cierra el menú al hacer clic en cualquier enlace dentro del menú
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+document.getElementById('menu').classList.remove('active');
+    });
+});
+</script>
+</body>
+</html>

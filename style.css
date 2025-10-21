@@ -1,0 +1,647 @@
+:root{
+--bg:#ffff;
+  --accent:#FD434E;      /* rojo principal */
+  --accent-2:#1148BC;    /* azul de acento */
+--dark:#0a2140;
+--muted:#1148BC;
+--card-shadow: 0 6px 18px rgba(12,20,40,0.12);
+--radius:18px;
+--container:1200px;
+--font-family: 'Muli', sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0;
+font-family:var(--font-family);
+background:white;
+color:#122030;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+line-height:1.5;
+}
+
+/* Layout container */
+.container {
+    width: 90%;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background: rgba(17, 72, 188, 0.25);
+    backdrop-filter: blur(6px);
+    padding: 18px 0;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 44px;
+}
+
+/* Menú en escritorio (desktop) */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.main-nav a {
+    color: white; 
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+/* Menú hamburguesa - solo visible en móvil */
+.menu-toggle {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* --- Estilo para el menú desplegable en móvil --- */
+#menu {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('imagenes/footer.png') no-repeat center center;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cuando el menú está activo (se despliega) */
+#menu.active {
+    display: flex;
+    transform: translateY(0); 
+    height: 500px;
+}
+
+#menu a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 100 px;
+    text-align: center;
+}
+
+/* El botón "X" en la esquina superior derecha */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: white 2px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+/* Hero */
+.hero{
+position:relative;
+height:700px;
+margin: top 0px; 
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+.hero-bg{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+transform-origin:center;
+transition:transform .35s ease-out;
+}
+.hero-overlay{
+position:absolute;
+inset:0;;
+}
+.hero-content{
+  position: absolute;
+  bottom: 80px; 
+  left: 0; 
+  z-index: 5;
+  text-align: left;
+  width: 100%; 
+}
+.hero-title {
+display: inline-block;
+background:rgba(17,72,188,0.25);
+backdrop-filter: blur(6px); 
+-webkit-backdrop-filter: blur(10px); 
+padding: 14px 100px;
+border-radius: 12px;
+font-size: 34px;
+font-weight: 700;
+line-height: 2;
+color: white;
+text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25); 
+}
+
+/* Ocultar imágenes mobile por defecto (solo se verán en mobile) */
+.about-images-mobile,
+.bg-deco {
+  display: none;
+}
+
+/* --- Estilos base (desktop) --- */
+.about-row {
+  display: grid;
+  grid-template-columns: 0.5fr 520px 0.5fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-card img {
+  margin-top: 72px;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-images-mobile,
+.bg-deco {
+  display: none;
+}
+
+.about-text h2 p {
+  color:var(--accent-2); 
+  margin:0; 
+  font-size:32px;
+  text-align: center;} 
+  
+.about-text .accent {
+    color:var(--accent); 
+    text-align: center;} 
+    
+.about-text p {
+  color: black; 
+  text-align: left; 
+  padding-left: 20px; 
+  padding-right: 20px;} 
+  
+  .about-list { 
+    margin-top: 0px; 
+    padding-left: 20px; 
+    list-style-type: disc;  
+    color: black; text-align: left; } 
+    
+    .about-list li { 
+      margin-bottom: 6px; 
+      line-height: 1.4; 
+      font-weight: 400; }
+
+/* Portals/cards */
+.portals {
+  padding: 0px 0 72px 0;
+}
+
+.portals-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portals-title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 28px;
+  font-weight: 800;
+}
+
+.portals-title .accent {
+  color: #FD434E;
+}
+
+.portals-title .muted {
+  color: #1148BC;
+  margin-right: 8px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+.portal-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  height: 600px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.4s ease;
+}
+
+/* Imagen de fondo con transición para el zoom */
+.portal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* Efecto al pasar el ratón por la card */
+.portal-card:hover img {
+  transform: scale(1.1); /* Zoom suave */
+}
+
+/* Overlay inferior */
+.card-overlay {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(17, 72, 188, 0.25);
+  color: white;
+  backdrop-filter: blur(6px);
+}
+
+.card-meta h4 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.card-meta p {
+  margin: 2px 0 0;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* Botón con la flecha */
+.arrow-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 12px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Cambios al pasar el ratón por la card */
+.portal-card:hover .arrow-btn {
+  background: #FD434E; /* Fondo rojo */
+  border-color: white; /* Borde blanco */
+  color: white; /* Flecha blanca */
+}
+
+/* CTA red card with map */
+.contact-cta { padding: 100px 0px 72px 0}
+.cta-left{flex:1; color:white; }
+.cta-left h3{margin:0 0 30px 0; font-size:40px}
+.cta-left p.small{font-size: 20px; font-weight:700; margin:10px 0 4px 0}
+.cta-left p.muted{font-size: 20px; opacity:0.95;}
+.contact-icons img {padding-right: 20px;padding-top: 20px;}
+.cta-right{width: 500px; border-radius:12px; overflow:hidden; background:white; padding:0px; align-self:center}
+
+
+.map-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.corner-image {
+  position: absolute;
+  top: -40px;          
+  left: -40px;          
+  width: 400px;        
+  height: auto;    
+  z-index: 0;           
+}
+
+.cta-left {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+  background: linear-gradient(90deg, #EA4236, #B12F37);
+  padding: 40px;
+  border-radius: 18px;
+  border: 6px solid #B12F37;
+  overflow: hidden; /* Por si la imagen sale un poco del borde */
+}
+
+/* Footer */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+  margin-top: 30px;
+  color: white;
+}
+
+/* Imagen de fondo */
+.footer-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Contenido encima del fondo */
+.footer-inner,
+.copyright {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tus estilos originales */
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.footer-columns {
+  display: flex;
+  gap: 40px;
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.footer-brand img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-columns h4 {
+  margin: 0 0 8px 0;
+}
+
+.footer-columns p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Quita el formato de enlace en los teléfonos y mail */
+.footer-columns a {
+  color: white;           
+  text-decoration: none;   
+  font-weight: 400;         
+  transition: color 0.2s ease;
+}
+
+.copyright {
+  padding: 18px 0;
+  margin: 40px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  border-top: 1px solid white;
+}
+
+/* Responsive básicos*/
+@media (max-width:1100px){
+.about-row{grid-template-columns:1fr; text-align:center}
+.about-card.right, .about-card.left{height:240px}
+.about-text{margin-left: 50px; margin-right: 50px;}
+.hero{height: 500px}
+.portals-container{grid-template-columns:1fr}
+.portals-title {margin-left: 50px; margin-right: 50px;}
+.cards-grid{grid-template-columns:1fr}
+.cta-right{width:320px}
+.hero h1{font-size: 32px; text-align: center; border-radius: 0px;}
+}
+@media (max-width:768px){
+  .cards-grid {
+    grid-template-columns: 1fr; /* una sola columna */
+    gap: 24px; /* separa las cards entre sí */
+    margin: 0 20px 40px 20px; /* 👈 margen igual al de la card de abajo */
+  }
+.site-header{padding:12px 0}
+.main-nav{display:none}
+.hero{height:600px}
+.hero h1 {font-size:30px}
+.about-text {padding:18px; margin-left: 20px;margin-right: 20px;}
+.portals-title{margin-left: 30px; margin-right: 30px;}
+.cta-card { flex-direction:column}
+.cta-right { width:100%}
+.footer-inner { flex-direction:column; gap:12px; text-align:center}
+}
+
+/* Ocultar el menú en dispositivos móviles */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 12px 0;
+    }
+
+    /* Mostrar el botón hamburguesa solo en móviles */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* El menú está oculto en móviles por defecto */
+    #menu {
+        display: none;
+    }
+
+    /* Mostrar el menú cuando tiene la clase 'active' */
+    #menu.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    #menu a {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        margin: 20px 0;
+    }
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8); 
+  color: #fff;
+  font-size: 25px;
+  border-radius: 12px; 
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+    .main-nav {
+        display: flex;
+    }
+}
+
+
+/* Estructura About us en mobile */
+@media (max-width: 768px) {
+  #nosotros {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .about-row {
+    display: block;
+    text-align: center;
+    position: relative;
+    padding: 0;
+  }
+
+  .about-card {
+    display: none;
+  }
+
+  /* --- Imágenes decorativas dentro de la sección --- */
+  .bg-deco {
+    display: block;
+    position: absolute;
+    width: 140px;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .bg-deco.top-right {
+    top: 0;
+    right: 0;
+  }
+
+  .bg-deco.bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+
+  /* --- Texto --- */
+  .about-text {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+  }
+
+  /* --- Imágenes mobile, una debajo de otra --- */
+  .about-images-mobile {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about-images-mobile img {
+    width: 50%; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+  }
+
+  /* Primera imagen: pegada al borde izquierdo */
+  .about-images-mobile img:first-child {
+    align-self: flex-start;
+  }
+
+  /* Segunda imagen: pegada al borde derecho */
+  .about-images-mobile img:last-child {
+    align-self: flex-end;
+  }
+}
+
+/* Menú en escritorio */
+@media (min-width: 768px) {
+  #menu {
+    display: flex !important;
+    position: static;
+    background: transparent;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+  }
+
+  #menu a {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  /* Ocultar el botón "X" y hamburguesa en escritorio */
+  .close-menu,
+  .menu-toggle {
+    display: none !important;
+  }
+}
