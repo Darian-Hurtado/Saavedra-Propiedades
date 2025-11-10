@@ -133,7 +133,7 @@ text-decoration: underline;
     cursor: pointer;
     z-index: 1010;
 }
-/* 🔹 Evita que el header tape las secciones ancladas */
+/* Evita que el header tape las secciones ancladas */
 section[id] {
   scroll-margin-top: 80px; /* o la altura exacta del menú */
 }
@@ -359,11 +359,11 @@ text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 
 /* CTA red card with map */
 .contact-cta { padding: 70px 0px 50px 0}
-.cta-left{flex:1; color:white; padding:20px;}
-.cta-left h3{margin:0 0 30px 0; font-size:32px; font-weight: 700;}
+.cta-left{flex:1; color:white; padding:0px;}
+.cta-left h3{margin:0 0 30px 0; font-size:24px; font-weight: 700;}
 .cta-left p.small{font-size: 20px; font-weight:700; margin-bottom: -10px; margin-top: 30px;}
 .cta-left p.muted{font-size: 20px; opacity:0.95;}
-.contact-icons img {padding-right: 20px; padding-top: 20px; height: 70px; width: auto;}
+.contact-icons img {margin-right: 20px; margin-top: 20px; height: 70px; width: auto;}
 /* Hover individual para cada icono */
 .contact-icons .contact-wa:hover {
   content: url("imagenes/contacto-whatsapp-hover.png");
@@ -510,7 +510,7 @@ text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 .portals-title {margin-left: 50px; margin-right: 50px;}
 .cards-grid{grid-template-columns:1fr}
 .cta-right{width:320px}
-.hero h1{font-size: 32px; text-align: center; border-radius: 0px;}
+.hero h1{font-size: 32px; text-align: center; border-radius: 0px; padding: 20px;}
 .logo {height: 34px; width:auto;}
 }
 
